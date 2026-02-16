@@ -1,6 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask, send_from_directory
+import os
 
 app = Flask(__name__)
+
 @app.route('/')
 
 def home():
@@ -9,6 +11,10 @@ def home():
 def spider_trap():
     # To Do: Implement the spider trap logic here
     pass
+
+@app.route('/robots.txt')
+def static_from_root():
+    return send_from_directory(app.static_folder, 'robots.txt')
 
 if __name__ == '__main__':
     app.run(debug=True)
