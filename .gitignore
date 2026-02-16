@@ -1,0 +1,17 @@
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Flask/Instance folder
+instance/
+.webassets-cache
+
+# OS-specific files
+.DS_Store
+Thumbs.db
