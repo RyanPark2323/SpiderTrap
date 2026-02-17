@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Directory Listing of /system-logs-archive/</title>
+    <style>
+        body { font-family: monospace; background: #f0f0f0; padding: 20px; }
+        .container { background: white; border: 1px solid #ccc; padding: 20px; }
+        a { color: #0000ee; text-decoration: none; display: block; margin: 5px 0; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Index of /system-logs-archive/</h1>
+        <hr>
+        {% for path in paths %}
+            <a href="/system-logs-archive/{{ path }}">log_entry_{{ path }}.db</a>
+        {% endfor %}
+        <hr>
+    </div>
+</body>
+</html>
